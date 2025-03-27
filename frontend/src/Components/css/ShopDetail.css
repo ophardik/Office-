@@ -1,0 +1,74 @@
+@REM body {
+@REM   font-family: Arial, sans-serif;
+@REM   background-color: #f4f4f9;
+@REM   margin: 0;
+@REM   padding: 0;
+@REM   box-sizing: border-box;
+@REM }
+
+@REM .property-grid {
+@REM   display: grid;
+@REM   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+@REM   gap: 20px;
+@REM   padding: 20px;
+@REM }
+
+@REM .property-card {
+@REM   background-color: #fff;
+@REM   border-radius: 10px;
+@REM   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+@REM   overflow: hidden;
+@REM   transition: transform 0.3s, box-shadow 0.3s;
+@REM }
+
+@REM .property-card:hover {
+@REM   transform: translateY(-5px);
+@REM   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+@REM }
+
+@REM .property-details {
+@REM   padding: 15px;
+@REM }
+
+@REM .property-details h3 {
+@REM   font-size: 1.5em;
+@REM   color: #333;
+@REM   margin-bottom: 10px;
+@REM }
+
+@REM .property-details p {
+@REM   color: #555;
+@REM   margin: 5px 0;
+@REM }
+
+@REM .property-price {
+@REM   color: #007bff;
+@REM   font-weight: bold;
+@REM   margin-top: 10px;
+@REM }
+
+@REM .property-location a {
+@REM   color: #007bff;
+@REM   text-decoration: none;
+@REM }
+
+@REM .property-location a:hover {
+@REM   text-decoration: underline;
+@REM }
+
+@REM .swiper-container {
+@REM   height: 200px;
+@REM }
+
+@REM .swiper-container img {
+@REM   width: 100%;
+@REM   height: 100%;
+@REM   object-fit: cover;
+@REM }
+
+@REM #spinner {
+@REM   background-color: rgba(255, 255, 255, 0.8);
+@REM }
+@REM .spinner-border {
+@REM   color: #007bff;
+@REM }
