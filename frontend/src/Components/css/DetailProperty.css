@@ -1,0 +1,283 @@
+/* Navbar - Fixed at top */
+
+/* Mobile Styling */
+@media (max-width: 992px) {
+  /* Prevent horizontal scrolling */
+  body, html {
+    overflow-x: hidden;
+  }
+
+  /* Navbar container should take full width */
+  .navbar {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  /* Navbar content (menu) full width */
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Ensure navbar items are properly aligned */
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Align dropdown menu */
+  .dropdown-menu {
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  /* Fix toggler button alignment */
+  .navbar-toggler {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Ensure navbar toggler and brand are separate */
+  .navbar-brand {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+    
+    .navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Keeps navbar at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white; /* Ensure background is visible */
+  z-index: 1000; /* Make sure it stays above other content */
+  padding: 10px 20px;
+}
+
+/* Add padding to prevent content from going under navbar */
+body {
+  padding-top: 70px; /* Adjust this based on navbar height */
+}
+
+/* Fix logo visibility */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+@REM   gap: 8px;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  white-space: nowrap;
+  color: black; /* Ensure text is visible */
+}
+
+/* Ensure navbar items are aligned */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+@REM   gap: 15px;
+}
+ .dropdown-menu {
+    width: 100% !important;
+    text-align: center;
+  }
+   .navbar-toggler {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+
+  /* Adjust brand text size */
+  .brand-name {
+    font-size: 1.2rem;
+    margin-right:8px;
+  }
+
+  /* Fix toggler button spacing */
+  .navbar-toggler {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 576px) {
+    .navbar-nav .nav-link:focus, 
+.navbar-nav .nav-link:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+  /* Reduce brand font size */
+  .brand-name {
+    font-size: 1.2rem;
+  }
+
+  /* Resize logo */
+  .icon img {
+    width: 25px;
+    height: 25px;
+  }
+
+  /* Ensure dropdowns stay within screen */
+  .dropdown-menu {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Container Styling */
+.detail-property-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Heading */
+.detail-property-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+/* Grid Layout */
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Property Card */
+.property-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Swiper Styling */
+.swiper-container {
+  width: 100%;
+  height: 250px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Property Details */
+.property-details {
+  padding: 15px;
+}
+
+.property-details h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.property-details p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Price */
+.property-price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-top: 10px;
+}
+
+/* Google Maps Link */
+.property-location a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.property-location a:hover {
+  text-decoration: underline;
+}
+.navbar {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .property-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .swiper-container {
+    height: 200px;
+  }
+
+  .property-card {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .detail-property-container h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-container {
+    height: 180px;
+  }
+
+  .property-details {
+    padding: 10px;
+  }
+
+  .property-details h3 {
+    font-size: 1.3rem;
+  }
+
+  .property-price {
+    font-size: 1.2rem;
+  }
+}

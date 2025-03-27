@@ -1,0 +1,1233 @@
+@REM /**
+@REM * Template Name: NiceAdmin
+@REM * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+@REM * Updated: Apr 20 2024 with Bootstrap v5.3.3
+@REM * Author: BootstrapMade.com
+@REM * License: https://bootstrapmade.com/license/
+@REM */
+
+@REM /*--------------------------------------------------------------
+@REM # General
+@REM --------------------------------------------------------------*/
+@REM :root {
+@REM   scroll-behavior: smooth;
+@REM }
+
+@REM @REM body {
+@REM @REM   font-family: "Open Sans", sans-serif;
+@REM @REM   background: #f6f9ff;
+@REM @REM   color: #444444;
+@REM @REM }
+
+@REM @REM a {
+@REM @REM   color: #4154f1;
+@REM @REM   text-decoration: none;
+@REM @REM }
+
+@REM @REM a:hover {
+@REM @REM   color: #717ff5;
+@REM @REM   text-decoration: none;
+@REM @REM }
+
+@REM @REM h1,
+@REM @REM h2,
+@REM @REM h3,
+@REM @REM h4,
+@REM @REM h5,
+@REM @REM h6 {
+@REM @REM   font-family: "Nunito", sans-serif;
+@REM @REM }
+
+@REM /*--------------------------------------------------------------
+@REM # Main
+@REM --------------------------------------------------------------*/
+@REM @REM #main {
+@REM @REM   margin-top: 60px;
+@REM @REM   padding: 20px 30px;
+@REM @REM   transition: all 0.3s;
+@REM @REM }
+
+@REM @REM @media (max-width: 1199px) {
+@REM @REM   #main {
+@REM @REM     padding: 20px;
+@REM @REM   }
+@REM @REM }
+
+@REM /*--------------------------------------------------------------
+@REM # Page Title
+@REM --------------------------------------------------------------*/
+@REM @REM .pagetitle {
+@REM @REM   margin-bottom: 10px;
+@REM @REM }
+
+@REM @REM .pagetitle h1 {
+@REM @REM   font-size: 24px;
+@REM @REM   margin-bottom: 0;
+@REM @REM   font-weight: 600;
+@REM @REM   color: #012970;
+@REM @REM }
+
+@REM @REM /*--------------------------------------------------------------
+@REM @REM # Back to top button
+@REM @REM --------------------------------------------------------------*/
+@REM @REM .back-to-top {
+@REM @REM   position: fixed;
+@REM @REM   visibility: hidden;
+@REM @REM   opacity: 0;
+@REM @REM   right: 15px;
+@REM @REM   bottom: 15px;
+@REM @REM   z-index: 99999;
+@REM @REM   background: #4154f1;
+@REM @REM   width: 40px;
+@REM @REM   height: 40px;
+@REM @REM   border-radius: 4px;
+@REM @REM   transition: all 0.4s;
+@REM @REM }
+
+@REM @REM .back-to-top i {
+@REM @REM   font-size: 24px;
+@REM @REM   color: #fff;
+@REM @REM   line-height: 0;
+@REM @REM }
+
+@REM @REM .back-to-top:hover {
+@REM @REM   background: #6776f4;
+@REM @REM   color: #fff;
+@REM @REM }
+
+@REM @REM .back-to-top.active {
+@REM @REM   visibility: visible;
+@REM @REM   opacity: 1;
+@REM @REM }
+
+@REM /*--------------------------------------------------------------
+@REM # Override some default Bootstrap stylings
+@REM @REM --------------------------------------------------------------*/
+@REM @REM /* Dropdown menus */
+@REM @REM .dropdown-menu {
+@REM @REM   border-radius: 4px;
+@REM @REM   padding: 10px 0;
+@REM @REM   animation-name: dropdown-animate;
+@REM @REM   animation-duration: 0.2s;
+@REM @REM   animation-fill-mode: both;
+@REM @REM   border: 0;
+@REM @REM   box-shadow: 0 5px 30px 0 rgba(82, 63, 105, 0.2);
+@REM @REM }
+
+@REM @REM .dropdown-menu .dropdown-header,
+@REM @REM .dropdown-menu .dropdown-footer {
+@REM @REM   text-align: center;
+@REM @REM   font-size: 15px;
+@REM @REM   padding: 10px 25px;
+@REM @REM }
+
+@REM @REM .dropdown-menu .dropdown-footer a {
+@REM @REM   color: #444444;
+@REM @REM   text-decoration: underline;
+@REM @REM }
+
+@REM @REM .dropdown-menu .dropdown-footer a:hover {
+@REM @REM   text-decoration: none;
+@REM @REM }
+
+@REM @REM .dropdown-menu .dropdown-divider {
+@REM @REM   color: #a5c5fe;
+@REM @REM   margin: 0;
+@REM @REM }
+
+@REM @REM .dropdown-menu .dropdown-item {
+@REM @REM   font-size: 14px;
+@REM @REM   padding: 10px 15px;
+@REM @REM   transition: 0.3s;
+@REM @REM }
+
+@REM @REM .dropdown-menu .dropdown-item i {
+@REM @REM   margin-right: 10px;
+@REM @REM   font-size: 18px;
+@REM @REM   line-height: 0;
+@REM @REM }
+
+@REM @REM .dropdown-menu .dropdown-item:hover {
+@REM @REM   /* background-color: #f6f9ff; */
+@REM @REM }
+
+@REM @REM @media (min-width: 768px) {
+@REM @REM   .dropdown-menu-arrow::before {
+@REM @REM     content: "";
+@REM @REM     width: 13px;
+@REM @REM     height: 13px;
+@REM @REM     background: #fff;
+@REM @REM     position: absolute;
+@REM @REM     top: -7px;
+@REM @REM     right: 20px;
+@REM @REM     transform: rotate(45deg);
+@REM @REM     border-top: 1px solid #eaedf1;
+@REM @REM     border-left: 1px solid #eaedf1;
+@REM @REM   }
+@REM @REM }
+
+@REM @REM @keyframes dropdown-animate {
+@REM @REM   0% {
+@REM @REM     opacity: 0;
+@REM @REM   }
+
+@REM @REM   100% {
+@REM @REM     opacity: 1;
+@REM @REM   }
+
+@REM @REM   0% {
+@REM @REM     opacity: 0;
+@REM @REM   }
+@REM @REM }
+
+@REM /* Light Backgrounds */
+@REM @REM .bg-primary-light {
+@REM @REM   background-color: #cfe2ff;
+@REM @REM   border-color: #cfe2ff;
+@REM @REM }
+
+@REM @REM .bg-secondary-light {
+@REM @REM   background-color: #e2e3e5;
+@REM @REM   border-color: #e2e3e5;
+@REM @REM }
+
+@REM @REM .bg-success-light {
+@REM @REM   background-color: #d1e7dd;
+@REM @REM   border-color: #d1e7dd;
+@REM @REM }
+
+@REM @REM .bg-danger-light {
+@REM @REM   background-color: #f8d7da;
+@REM @REM   border-color: #f8d7da;
+@REM @REM }
+
+@REM @REM .bg-warning-light {
+@REM @REM   background-color: #fff3cd;
+@REM @REM   border-color: #fff3cd;
+@REM @REM }
+
+@REM @REM .bg-info-light {
+@REM @REM   background-color: #cff4fc;
+@REM @REM   border-color: #cff4fc;
+@REM @REM }
+
+@REM @REM .bg-dark-light {
+@REM @REM   background-color: #d3d3d4;
+@REM @REM   border-color: #d3d3d4;
+@REM @REM }
+
+@REM @REM /* Card */
+@REM @REM .card {
+@REM @REM   margin-bottom: 30px;
+@REM @REM   border: none;
+@REM @REM   border-radius: 5px;
+@REM @REM   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+@REM @REM }
+
+@REM @REM .card-header,
+@REM @REM .card-footer {
+@REM @REM   border-color: #ebeef4;
+@REM @REM   background-color: #fff;
+@REM @REM   color: #798eb3;
+@REM @REM   padding: 15px;
+@REM @REM }
+
+@REM @REM .card-title {
+@REM @REM   padding: 20px 0 15px 0;
+@REM @REM   font-size: 18px;
+@REM @REM   font-weight: 500;
+@REM @REM   color: #012970;
+@REM @REM   font-family: "Poppins", sans-serif;
+@REM @REM }
+
+@REM @REM .card-title span {
+@REM @REM   color: #899bbd;
+@REM @REM   font-size: 14px;
+@REM @REM   font-weight: 400;
+@REM @REM }
+
+@REM @REM .card-body {
+@REM @REM   padding: 0 20px 20px 20px;
+@REM @REM }
+
+@REM @REM .card-img-overlay {
+@REM @REM   background-color: rgba(255, 255, 255, 0.6);
+@REM @REM }
+
+@REM @REM /* Alerts */
+@REM @REM .alert-heading {
+@REM @REM   font-weight: 500;
+@REM @REM   font-family: "Poppins", sans-serif;
+@REM @REM   font-size: 20px;
+@REM @REM }
+
+@REM @REM /* Close Button */
+@REM @REM .btn-close {
+@REM @REM   background-size: 25%;
+@REM @REM }
+
+@REM @REM .btn-close:focus {
+@REM @REM   outline: 0;
+@REM @REM   box-shadow: none;
+@REM @REM }
+
+@REM @REM /* Accordion */
+@REM @REM .accordion-item {
+@REM @REM   border: 1px solid #ebeef4;
+@REM @REM }
+
+@REM @REM .accordion-button:focus {
+@REM @REM   outline: 0;
+@REM @REM   box-shadow: none;
+@REM @REM }
+
+@REM @REM .accordion-button:not(.collapsed) {
+@REM @REM   color: #012970;
+@REM @REM   background-color: #f6f9ff;
+@REM @REM }
+
+@REM @REM .accordion-flush .accordion-button {
+@REM @REM   padding: 15px 0;
+@REM @REM   background: none;
+@REM @REM   border: 0;
+@REM @REM }
+
+@REM @REM .accordion-flush .accordion-button:not(.collapsed) {
+@REM @REM   box-shadow: none;
+@REM @REM   color: #4154f1;
+@REM @REM }
+
+@REM @REM .accordion-flush .accordion-body {
+@REM @REM   padding: 0 0 15px 0;
+@REM @REM   color: #3e4f6f;
+@REM @REM   font-size: 15px;
+@REM @REM }
+
+@REM @REM /* Breadcrumbs */
+@REM @REM .breadcrumb {
+@REM @REM   font-size: 14px;
+@REM @REM   font-family: "Nunito", sans-serif;
+@REM @REM   color: #899bbd;
+@REM @REM   font-weight: 600;
+@REM @REM }
+
+@REM @REM .breadcrumb a {
+@REM @REM   color: #899bbd;
+@REM @REM   transition: 0.3s;
+@REM @REM }
+
+@REM @REM .breadcrumb a:hover {
+@REM @REM   color: #51678f;
+@REM @REM }
+
+@REM @REM .breadcrumb .breadcrumb-item::before {
+@REM @REM   color: #899bbd;
+@REM @REM }
+
+@REM @REM .breadcrumb .active {
+@REM @REM   color: #51678f;
+@REM @REM   font-weight: 600;
+@REM @REM }
+
+@REM @REM /* Bordered Tabs */
+@REM @REM .nav-tabs-bordered {
+@REM @REM   border-bottom: 2px solid #ebeef4;
+@REM @REM }
+
+@REM @REM .nav-tabs-bordered .nav-link {
+@REM @REM   margin-bottom: -2px;
+@REM @REM   border: none;
+@REM @REM   color: #2c384e;
+@REM @REM }
+
+@REM @REM .nav-tabs-bordered .nav-link:hover,
+@REM @REM .nav-tabs-bordered .nav-link:focus {
+@REM @REM   color: #4154f1;
+@REM @REM }
+
+@REM @REM .nav-tabs-bordered .nav-link.active {
+@REM @REM   background-color: #fff;
+@REM @REM   color: #4154f1;
+@REM @REM   border-bottom: 2px solid #4154f1;
+@REM @REM }
+
+@REM /*--------------------------------------------------------------
+@REM # Header
+@REM --------------------------------------------------------------*/
+@REM @REM .logo {
+@REM @REM   line-height: 1;
+@REM @REM }
+
+@REM @REM @media (min-width: 1200px) {
+@REM @REM   .logo {
+@REM @REM     width: 280px;
+@REM @REM   }
+@REM @REM }
+
+@REM @REM .logo img {
+@REM @REM   max-height: 26px;
+@REM @REM   margin-right: 6px;
+@REM @REM }
+
+@REM @REM .logo span {
+@REM @REM   font-size: 26px;
+@REM @REM   font-weight: 700;
+@REM @REM   color: #012970;
+@REM @REM   font-family: "Nunito", sans-serif;
+@REM @REM }
+
+@REM @REM .header {
+@REM @REM   transition: all 0.5s;
+@REM @REM   z-index: 997;
+@REM @REM   height: 60px;
+@REM @REM   box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+@REM @REM   background-color: #fff;
+@REM @REM   padding-left: 20px;
+@REM @REM   /* Toggle Sidebar Button */
+@REM @REM   /* Search Bar */
+@REM @REM }
+
+@REM @REM .header .toggle-sidebar-btn {
+@REM @REM   font-size: 32px;
+@REM @REM   padding-left: 10px;
+@REM @REM   cursor: pointer;
+@REM @REM   color: #012970;
+@REM @REM }
+
+@REM @REM .header .search-bar {
+@REM @REM   min-width: 360px;
+@REM @REM   padding: 0 20px;
+@REM @REM }
+
+@REM @REM @media (max-width: 1199px) {
+@REM @REM   .header .search-bar {
+@REM @REM     position: fixed;
+@REM @REM     top: 50px;
+@REM @REM     left: 0;
+@REM @REM     right: 0;
+@REM @REM     padding: 20px;
+@REM @REM     box-shadow: 0px 0px 15px 0px rgba(1, 41, 112, 0.1);
+@REM @REM     background: white;
+@REM @REM     z-index: 9999;
+@REM @REM     transition: 0.3s;
+@REM @REM     visibility: hidden;
+@REM @REM     opacity: 0;
+@REM @REM   }
+
+@REM @REM   .header .search-bar-show {
+@REM @REM     top: 60px;
+@REM @REM     visibility: visible;
+@REM @REM     opacity: 1;
+@REM @REM   }
+@REM @REM }
+
+@REM @REM .header .search-form {
+@REM @REM   width: 100%;
+@REM @REM }
+
+@REM @REM .header .search-form input {
+@REM @REM   border: 0;
+@REM @REM   font-size: 14px;
+@REM @REM   color: #012970;
+@REM @REM   border: 1px solid rgba(1, 41, 112, 0.2);
+@REM @REM   padding: 7px 38px 7px 8px;
+@REM @REM   border-radius: 3px;
+@REM @REM   transition: 0.3s;
+@REM @REM   width: 100%;
+@REM @REM }
+
+@REM @REM .header .search-form input:focus,
+@REM @REM .header .search-form input:hover {
+@REM @REM   outline: none;
+@REM @REM   box-shadow: 0 0 10px 0 rgba(1, 41, 112, 0.15);
+@REM @REM   border: 1px solid rgba(1, 41, 112, 0.3);
+@REM @REM }
+
+@REM @REM .header .search-form button {
+@REM @REM   border: 0;
+@REM @REM   padding: 0;
+@REM @REM   margin-left: -30px;
+@REM @REM   background: none;
+@REM @REM }
+
+@REM @REM .header .search-form button i {
+@REM @REM   color: #012970;
+@REM @REM }
+
+@REM /*--------------------------------------------------------------
+@REM # Header Nav
+@REM --------------------------------------------------------------*/
+@REM @REM .header-nav ul {
+@REM @REM   list-style: none;
+@REM @REM }
+
+@REM @REM .header-nav>ul {
+@REM @REM   margin: 0;
+@REM @REM   padding: 0;
+@REM @REM }
+
+@REM @REM .header-nav .nav-icon {
+@REM @REM   font-size: 22px;
+@REM @REM   color: #012970;
+@REM @REM   margin-right: 25px;
+@REM @REM   position: relative;
+@REM @REM }
+
+@REM @REM .header-nav .nav-profile {
+@REM @REM   color: #012970;
+@REM @REM }
+
+@REM @REM .header-nav .nav-profile img {
+@REM @REM   max-height: 36px;
+@REM @REM }
+
+@REM @REM .header-nav .nav-profile span {
+@REM @REM   font-size: 14px;
+@REM @REM   font-weight: 600;
+@REM @REM }
+
+@REM @REM .header-nav .badge-number {
+@REM @REM   position: absolute;
+@REM @REM   inset: -2px -5px auto auto;
+@REM @REM   font-weight: normal;
+@REM @REM   font-size: 12px;
+@REM @REM   padding: 3px 6px;
+@REM @REM }
+
+@REM @REM .header-nav .notifications {
+@REM @REM   inset: 8px -15px auto auto !important;
+@REM @REM }
+
+@REM @REM .header-nav .notifications .notification-item {
+@REM @REM   display: flex;
+@REM @REM   align-items: center;
+@REM @REM   padding: 15px 10px;
+@REM @REM   transition: 0.3s;
+@REM @REM }
+
+@REM @REM .header-nav .notifications .notification-item i {
+@REM @REM   margin: 0 20px 0 10px;
+@REM @REM   font-size: 24px;
+@REM @REM }
+
+@REM @REM .header-nav .notifications .notification-item h4 {
+@REM @REM   font-size: 16px;
+@REM @REM   font-weight: 600;
+@REM @REM   margin-bottom: 5px;
+@REM @REM }
+
+@REM @REM .header-nav .notifications .notification-item p {
+@REM @REM   font-size: 13px;
+@REM @REM   margin-bottom: 3px;
+@REM @REM   color: #919191;
+@REM @REM }
+
+@REM @REM .header-nav .notifications .notification-item:hover {
+@REM @REM   background-color: #f6f9ff;
+@REM @REM }
+
+@REM @REM .header-nav .messages {
+@REM @REM   inset: 8px -15px auto auto !important;
+@REM @REM }
+
+@REM @REM .header-nav .messages .message-item {
+@REM @REM   padding: 15px 10px;
+@REM @REM   transition: 0.3s;
+@REM @REM }
+
+@REM @REM .header-nav .messages .message-item a {
+@REM @REM   display: flex;
+@REM @REM }
+
+@REM @REM .header-nav .messages .message-item img {
+@REM @REM   margin: 0 20px 0 10px;
+@REM @REM   max-height: 40px;
+@REM @REM }
+
+@REM @REM .header-nav .messages .message-item h4 {
+@REM @REM   font-size: 16px;
+@REM @REM   font-weight: 600;
+@REM @REM   margin-bottom: 5px;
+@REM @REM   color: #444444;
+@REM @REM }
+
+@REM @REM .header-nav .messages .message-item p {
+@REM @REM   font-size: 13px;
+@REM @REM   margin-bottom: 3px;
+@REM @REM   color: #919191;
+@REM @REM }
+
+@REM @REM .header-nav .messages .message-item:hover {
+@REM @REM   background-color: #f6f9ff;
+@REM @REM }
+
+@REM @REM .header-nav .profile {
+@REM @REM   min-width: 240px;
+@REM @REM   padding-bottom: 0;
+@REM @REM   top: 8px !important;
+@REM @REM }
+
+@REM @REM .header-nav .profile .dropdown-header h6 {
+@REM @REM   font-size: 18px;
+@REM @REM   margin-bottom: 0;
+@REM @REM   font-weight: 600;
+@REM @REM   color: #444444;
+@REM @REM }
+
+@REM @REM .header-nav .profile .dropdown-header span {
+@REM @REM   font-size: 14px;
+@REM @REM }
+
+@REM @REM .header-nav .profile .dropdown-item {
+@REM @REM   font-size: 14px;
+@REM @REM   padding: 10px 15px;
+@REM @REM   transition: 0.3s;
+@REM @REM }
+
+@REM @REM .header-nav .profile .dropdown-item i {
+@REM @REM   margin-right: 10px;
+@REM @REM   font-size: 18px;
+@REM @REM   line-height: 0;
+@REM @REM }
+
+@REM @REM .header-nav .profile .dropdown-item:hover {
+@REM @REM   background-color: #f6f9ff;
+@REM @REM }
+
+@REM /*--------------------------------------------------------------
+@REM # Sidebar
+@REM --------------------------------------------------------------*/
+@REM @REM .sidebar {
+@REM @REM   position: fixed;
+@REM @REM   top: 60px;
+@REM @REM   left: 0;
+@REM @REM   bottom: 0;
+@REM @REM   width: 300px;
+@REM @REM   z-index: 996;
+@REM @REM   transition: all 0.3s;
+@REM @REM   padding: 20px;
+@REM @REM   overflow-y: auto;
+@REM @REM   scrollbar-width: thin;
+@REM @REM   scrollbar-color: #aab7cf transparent;
+@REM @REM   box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+@REM @REM   background-color: #fff;
+@REM @REM }
+
+@REM @REM @media (max-width: 1199px) {
+@REM @REM   .sidebar {
+@REM @REM     left: -300px;
+@REM @REM   }
+@REM @REM }
+
+@REM @REM .sidebar::-webkit-scrollbar {
+@REM @REM   width: 5px;
+@REM @REM   height: 8px;
+@REM @REM   background-color: #fff;
+@REM @REM }
+
+@REM @REM .sidebar::-webkit-scrollbar-thumb {
+@REM @REM   background-color: #aab7cf;
+@REM @REM }
+
+@REM @REM @media (min-width: 1200px) {
+
+@REM @REM   #main,
+@REM @REM   #footer {
+@REM @REM     margin-left: 300px;
+@REM @REM   }
+@REM @REM }
+
+@REM @REM @media (max-width: 1199px) {
+@REM @REM   .toggle-sidebar .sidebar {
+@REM @REM     left: 0;
+@REM @REM   }
+@REM @REM }
+
+@REM @REM @media (min-width: 1200px) {
+
+@REM @REM   .toggle-sidebar #main,
+@REM @REM   .toggle-sidebar #footer {
+@REM @REM     margin-left: 0;
+@REM @REM   }
+
+@REM @REM   .toggle-sidebar .sidebar {
+@REM @REM     left: -300px;
+@REM @REM   }
+@REM @REM }
+
+@REM @REM .sidebar-nav {
+@REM @REM   padding: 0;
+@REM @REM   margin: 0;
+@REM @REM   list-style: none;
+@REM @REM }
+
+@REM @REM .sidebar-nav li {
+@REM @REM   padding: 0;
+@REM @REM   margin: 0;
+@REM @REM   list-style: none;
+@REM @REM }
+
+@REM @REM .sidebar-nav .nav-item {
+@REM @REM   margin-bottom: 5px;
+@REM @REM }
+
+@REM @REM .sidebar-nav .nav-heading {
+@REM @REM   font-size: 11px;
+@REM @REM   text-transform: uppercase;
+@REM @REM   color: #899bbd;
+@REM @REM   font-weight: 600;
+@REM @REM   margin: 10px 0 5px 15px;
+@REM @REM }
+
+@REM @REM .sidebar-nav .nav-link {
+@REM @REM   display: flex;
+@REM @REM   align-items: center;
+@REM @REM   font-size: 15px;
+@REM @REM   font-weight: 600;
+@REM @REM   color: #4154f1;
+@REM @REM   transition: 0.3;
+@REM @REM   background: #f6f9ff;
+@REM @REM   padding: 10px 15px;
+@REM @REM   border-radius: 4px;
+@REM @REM }
+
+@REM @REM .sidebar-nav .nav-link i {
+@REM @REM   font-size: 16px;
+@REM @REM   margin-right: 10px;
+@REM @REM   color: #4154f1;
+@REM @REM }
+
+@REM @REM .sidebar-nav .nav-link.collapsed {
+@REM @REM   color: #012970;
+@REM @REM   background: #fff;
+@REM @REM }
+
+@REM @REM .sidebar-nav .nav-link.collapsed i {
+@REM @REM   color: #899bbd;
+@REM @REM }
+
+@REM @REM .sidebar-nav .nav-link:hover {
+@REM @REM   color: #4154f1;
+@REM @REM   background: #f6f9ff;
+@REM @REM }
+
+@REM .sidebar-nav .nav-link:hover i {
+@REM   color: #4154f1;
+@REM }
+
+@REM .sidebar-nav .nav-link .bi-chevron-down {
+@REM   margin-right: 0;
+@REM   transition: transform 0.2s ease-in-out;
+@REM }
+
+@REM .sidebar-nav .nav-link:not(.collapsed) .bi-chevron-down {
+@REM   transform: rotate(180deg);
+@REM }
+
+@REM .sidebar-nav .nav-content {
+@REM   padding: 5px 0 0 0;
+@REM   margin: 0;
+@REM   list-style: none;
+@REM }
+
+@REM .sidebar-nav .nav-content a {
+@REM   display: flex;
+@REM   align-items: center;
+@REM   font-size: 14px;
+@REM   font-weight: 600;
+@REM   color: #012970;
+@REM   transition: 0.3;
+@REM   padding: 10px 0 10px 40px;
+@REM   transition: 0.3s;
+@REM }
+
+@REM .sidebar-nav .nav-content a i {
+@REM   font-size: 6px;
+@REM   margin-right: 8px;
+@REM   line-height: 0;
+@REM   border-radius: 50%;
+@REM }
+
+@REM .sidebar-nav .nav-content a:hover,
+@REM .sidebar-nav .nav-content a.active {
+@REM   color: #4154f1;
+@REM }
+
+@REM .sidebar-nav .nav-content a.active i {
+@REM   background-color: #4154f1;
+@REM }
+
+@REM /*--------------------------------------------------------------
+@REM # Dashboard
+@REM --------------------------------------------------------------*/
+@REM /* Filter dropdown */
+@REM .dashboard .filter {
+@REM   position: absolute;
+@REM   right: 0px;
+@REM   top: 15px;
+@REM }
+
+@REM .dashboard .filter .icon {
+@REM   color: #aab7cf;
+@REM   padding-right: 20px;
+@REM   padding-bottom: 5px;
+@REM   transition: 0.3s;
+@REM   font-size: 16px;
+@REM }
+
+@REM .dashboard .filter .icon:hover,
+@REM .dashboard .filter .icon:focus {
+@REM   color: #4154f1;
+@REM }
+
+@REM .dashboard .filter .dropdown-header {
+@REM   padding: 8px 15px;
+@REM }
+
+@REM .dashboard .filter .dropdown-header h6 {
+@REM   text-transform: uppercase;
+@REM   font-size: 14px;
+@REM   font-weight: 600;
+@REM   letter-spacing: 1px;
+@REM   color: #aab7cf;
+@REM   margin-bottom: 0;
+@REM   padding: 0;
+@REM }
+
+@REM .dashboard .filter .dropdown-item {
+@REM   padding: 8px 15px;
+@REM }
+
+@REM /* Info Cards */
+@REM .dashboard .info-card {
+@REM   padding-bottom: 10px;
+@REM }
+
+@REM .dashboard .info-card h6 {
+@REM   font-size: 28px;
+@REM   color: #012970;
+@REM   font-weight: 700;
+@REM   margin: 0;
+@REM   padding: 0;
+@REM }
+
+@REM .dashboard .card-icon {
+@REM   font-size: 32px;
+@REM   line-height: 0;
+@REM   width: 64px;
+@REM   height: 64px;
+@REM   flex-shrink: 0;
+@REM   flex-grow: 0;
+@REM }
+
+@REM .dashboard .sales-card .card-icon {
+@REM   color: #4154f1;
+@REM   background: #f6f6fe;
+@REM }
+
+@REM .dashboard .revenue-card .card-icon {
+@REM   color: #2eca6a;
+@REM   background: #e0f8e9;
+@REM }
+
+@REM .dashboard .customers-card .card-icon {
+@REM   color: #ff771d;
+@REM   background: #ffecdf;
+@REM }
+
+@REM /* Activity */
+@REM .dashboard .activity {
+@REM   font-size: 14px;
+@REM }
+
+@REM .dashboard .activity .activity-item .activite-label {
+@REM   color: #888;
+@REM   position: relative;
+@REM   flex-shrink: 0;
+@REM   flex-grow: 0;
+@REM   min-width: 64px;
+@REM }
+
+@REM .dashboard .activity .activity-item .activite-label::before {
+@REM   content: "";
+@REM   position: absolute;
+@REM   right: -11px;
+@REM   width: 4px;
+@REM   top: 0;
+@REM   bottom: 0;
+@REM   background-color: #eceefe;
+@REM }
+
+@REM .dashboard .activity .activity-item .activity-badge {
+@REM   margin-top: 3px;
+@REM   z-index: 1;
+@REM   font-size: 11px;
+@REM   line-height: 0;
+@REM   border-radius: 50%;
+@REM   flex-shrink: 0;
+@REM   border: 3px solid #fff;
+@REM   flex-grow: 0;
+@REM }
+
+@REM .dashboard .activity .activity-item .activity-content {
+@REM   padding-left: 10px;
+@REM   padding-bottom: 20px;
+@REM }
+
+@REM .dashboard .activity .activity-item:first-child .activite-label::before {
+@REM   top: 5px;
+@REM }
+
+@REM .dashboard .activity .activity-item:last-child .activity-content {
+@REM   padding-bottom: 0;
+@REM }
+
+@REM /* News & Updates */
+@REM .dashboard .news .post-item+.post-item {
+@REM   margin-top: 15px;
+@REM }
+
+@REM .dashboard .news img {
+@REM   width: 80px;
+@REM   float: left;
+@REM   border-radius: 5px;
+@REM }
+
+@REM .dashboard .news h4 {
+@REM   font-size: 15px;
+@REM   margin-left: 95px;
+@REM   font-weight: bold;
+@REM   margin-bottom: 5px;
+@REM }
+
+@REM .dashboard .news h4 a {
+@REM   color: #012970;
+@REM   transition: 0.3s;
+@REM }
+
+@REM .dashboard .news h4 a:hover {
+@REM   color: #4154f1;
+@REM }
+
+@REM .dashboard .news p {
+@REM   font-size: 14px;
+@REM   color: #777777;
+@REM   margin-left: 95px;
+@REM }
+
+@REM /* Recent Sales */
+@REM .dashboard .recent-sales {
+@REM   font-size: 14px;
+@REM }
+
+@REM .dashboard .recent-sales .table thead {
+@REM   background: #f6f6fe;
+@REM }
+
+@REM .dashboard .recent-sales .table thead th {
+@REM   border: 0;
+@REM }
+
+@REM .dashboard .recent-sales .dataTable-top {
+@REM   padding: 0 0 10px 0;
+@REM }
+
+@REM .dashboard .recent-sales .dataTable-bottom {
+@REM   padding: 10px 0 0 0;
+@REM }
+
+@REM /* Top Selling */
+@REM .dashboard .top-selling {
+@REM   font-size: 14px;
+@REM }
+
+@REM .dashboard .top-selling .table thead {
+@REM   background: #f6f6fe;
+@REM }
+
+@REM .dashboard .top-selling .table thead th {
+@REM   border: 0;
+@REM }
+
+@REM .dashboard .top-selling .table tbody td {
+@REM   vertical-align: middle;
+@REM }
+
+@REM .dashboard .top-selling img {
+@REM   border-radius: 5px;
+@REM   max-width: 60px;
+@REM }
+
+@REM /*--------------------------------------------------------------
+@REM # Icons list page
+@REM --------------------------------------------------------------*/
+@REM .iconslist {
+@REM   display: grid;
+@REM   max-width: 100%;
+@REM   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+@REM   gap: 1.25rem;
+@REM   padding-top: 15px;
+@REM }
+
+@REM .iconslist .icon {
+@REM   background-color: #fff;
+@REM   border-radius: 0.25rem;
+@REM   text-align: center;
+@REM   color: #012970;
+@REM   padding: 15px 0;
+@REM }
+
+@REM .iconslist i {
+@REM   margin: 0.25rem;
+@REM   font-size: 2.5rem;
+@REM }
+
+@REM .iconslist .label {
+@REM   font-family: var(--bs-font-monospace);
+@REM   display: inline-block;
+@REM   width: 100%;
+@REM   overflow: hidden;
+@REM   padding: 0.25rem;
+@REM   font-size: 12px;
+@REM   text-overflow: ellipsis;
+@REM   white-space: nowrap;
+@REM   color: #666;
+@REM }
+
+@REM /*--------------------------------------------------------------
+@REM # Profie Page
+@REM --------------------------------------------------------------*/
+@REM .profile .profile-card img {
+@REM   max-width: 120px;
+@REM }
+
+@REM .profile .profile-card h2 {
+@REM   font-size: 24px;
+@REM   font-weight: 700;
+@REM   color: #2c384e;
+@REM   margin: 10px 0 0 0;
+@REM }
+
+@REM .profile .profile-card h3 {
+@REM   font-size: 18px;
+@REM }
+
+@REM .profile .profile-card .social-links a {
+@REM   font-size: 20px;
+@REM   display: inline-block;
+@REM   color: rgba(1, 41, 112, 0.5);
+@REM   line-height: 0;
+@REM   margin-right: 10px;
+@REM   transition: 0.3s;
+@REM }
+
+@REM .profile .profile-card .social-links a:hover {
+@REM   color: #012970;
+@REM }
+
+@REM .profile .profile-overview .row {
+@REM   margin-bottom: 20px;
+@REM   font-size: 15px;
+@REM }
+
+@REM .profile .profile-overview .card-title {
+@REM   color: #012970;
+@REM }
+
+@REM .profile .profile-overview .label {
+@REM   font-weight: 600;
+@REM   color: rgba(1, 41, 112, 0.6);
+@REM }
+
+@REM .profile .profile-edit label {
+@REM   font-weight: 600;
+@REM   color: rgba(1, 41, 112, 0.6);
+@REM }
+
+@REM .profile .profile-edit img {
+@REM   max-width: 120px;
+@REM }
+
+@REM /*--------------------------------------------------------------
+@REM # F.A.Q Page
+@REM --------------------------------------------------------------*/
+@REM .faq .basic h6 {
+@REM   font-size: 18px;
+@REM   font-weight: 600;
+@REM   color: #4154f1;
+@REM }
+
+@REM .faq .basic p {
+@REM   color: #6980aa;
+@REM }
+
+@REM /*--------------------------------------------------------------
+@REM # Contact
+@REM --------------------------------------------------------------*/
+@REM .contact .info-box {
+@REM   padding: 28px 30px;
+@REM }
+
+@REM .contact .info-box i {
+@REM   font-size: 38px;
+@REM   line-height: 0;
+@REM   color: #4154f1;
+@REM }
+
+@REM .contact .info-box h3 {
+@REM   font-size: 20px;
+@REM   color: #012970;
+@REM   font-weight: 700;
+@REM   margin: 20px 0 10px 0;
+@REM }
+
+@REM .contact .info-box p {
+@REM   padding: 0;
+@REM   line-height: 24px;
+@REM   font-size: 14px;
+@REM   margin-bottom: 0;
+@REM }
+
+@REM .contact .php-email-form .error-message {
+@REM   display: none;
+@REM   color: #fff;
+@REM   background: #ed3c0d;
+@REM   text-align: left;
+@REM   padding: 15px;
+@REM   margin-bottom: 24px;
+@REM   font-weight: 600;
+@REM }
+
+@REM .contact .php-email-form .sent-message {
+@REM   display: none;
+@REM   color: #fff;
+@REM   background: #18d26e;
+@REM   text-align: center;
+@REM   padding: 15px;
+@REM   margin-bottom: 24px;
+@REM   font-weight: 600;
+@REM }
+
+@REM .contact .php-email-form .loading {
+@REM   display: none;
+@REM   background: #fff;
+@REM   text-align: center;
+@REM   padding: 15px;
+@REM   margin-bottom: 24px;
+@REM }
+
+@REM .contact .php-email-form .loading:before {
+@REM   content: "";
+@REM   display: inline-block;
+@REM   border-radius: 50%;
+@REM   width: 24px;
+@REM   height: 24px;
+@REM   margin: 0 10px -6px 0;
+@REM   border: 3px solid #18d26e;
+@REM   border-top-color: #eee;
+@REM   animation: animate-loading 1s linear infinite;
+@REM }
+
+@REM .contact .php-email-form input,
+@REM .contact .php-email-form textarea {
+@REM   border-radius: 0;
+@REM   box-shadow: none;
+@REM   font-size: 14px;
+@REM   border-radius: 0;
+@REM }
+
+@REM .contact .php-email-form input:focus,
+@REM .contact .php-email-form textarea:focus {
+@REM   border-color: #4154f1;
+@REM }
+
+@REM .contact .php-email-form input {
+@REM   padding: 10px 15px;
+@REM }
+
+@REM .contact .php-email-form textarea {
+@REM   padding: 12px 15px;
+@REM }
+
+@REM .contact .php-email-form button[type=submit] {
+@REM   background: #4154f1;
+@REM   border: 0;
+@REM   padding: 10px 30px;
+@REM   color: #fff;
+@REM   transition: 0.4s;
+@REM   border-radius: 4px;
+@REM }
+
+@REM .contact .php-email-form button[type=submit]:hover {
+@REM   background: #5969f3;
+@REM }
+
+@REM @keyframes animate-loading {
+@REM   0% {
+@REM     transform: rotate(0deg);
+@REM   }
+
+@REM   100% {
+@REM     transform: rotate(360deg);
+@REM   }
+@REM }
+
+@REM /*--------------------------------------------------------------
+@REM # Error 404
+@REM --------------------------------------------------------------*/
+@REM .error-404 {
+@REM   padding: 30px;
+@REM }
+
+@REM .error-404 h1 {
+@REM   font-size: 180px;
+@REM   font-weight: 700;
+@REM   color: #4154f1;
+@REM   margin-bottom: 0;
+@REM   line-height: 150px;
+@REM }
+
+@REM .error-404 h2 {
+@REM   font-size: 24px;
+@REM   font-weight: 700;
+@REM   color: #012970;
+@REM   margin-bottom: 30px;
+@REM }
+
+@REM .error-404 .btn {
+@REM   background: #51678f;
+@REM   color: #fff;
+@REM   padding: 8px 30px;
+@REM }
+
+@REM .error-404 .btn:hover {
+@REM   background: #3e4f6f;
+@REM }
+
+@REM @media (min-width: 992px) {
+@REM   .error-404 img {
+@REM     max-width: 50%;
+@REM   }
+@REM }
+
+@REM /*--------------------------------------------------------------
+@REM # Footer
+@REM --------------------------------------------------------------*/
+@REM .footer {
+@REM   padding: 20px 0;
+@REM   font-size: 14px;
+@REM   transition: all 0.3s;
+@REM   border-top: 1px solid #cddfff;
+@REM }
+
+@REM .footer .copyright {
+@REM   text-align: center;
+@REM   color: #012970;
+@REM }
+
+@REM .footer .credits {
+@REM   padding-top: 5px;
+@REM   text-align: center;
+@REM   font-size: 13px;
+@REM   color: #012970;
+@REM }
