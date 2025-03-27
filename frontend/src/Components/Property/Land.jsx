@@ -19,6 +19,7 @@ import Property6 from '../img/property-6.jpg'
 import { useLocation } from "react-router-dom";
 const Land = () => {
      const location = useLocation();
+     const BASE_URL=process.env.REACT_APP_BACKEND_URL;
           const category = location.state?.category;
           console.log("category",category)
           const [property, setProperty] = useState([]);
@@ -32,7 +33,7 @@ const Land = () => {
             const fetchProperty = async () => {
               try {
                 setLoading(true);
-                const apiUrl = category === "land" ? "/api/allLand" : "/api/default";
+                const apiUrl = category === "land" ? `${BASE_URL}/api/allLand` : "/api/default";
                 const response = await fetch(apiUrl);
                 const result = await response.json();
                 console.log(result);

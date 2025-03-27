@@ -21,6 +21,7 @@ import { useLocation } from "react-router-dom";
 const Villa = () => {
     const location = useLocation();
           const category = location.state?.category;
+          const BASE_URL=process.env.REACT_APP_BACKEND_URL;
           // console.log("category",category)
           const [property, setProperty] = useState([]);
           const [loading, setLoading] = useState(true);
@@ -34,7 +35,7 @@ const Villa = () => {
             const fetchProperty = async () => {
               try {
                 setLoading(true);
-                var apiUrl = `/api6/allVilla`; // Adjust based on your category
+                var apiUrl = `${BASE_URL}/api6/allVilla`; // Adjust based on your category
                 const response = await fetch(apiUrl);
                 const data = await response.json();
                 console.log(data);

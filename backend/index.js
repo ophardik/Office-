@@ -17,7 +17,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 app.use("/villaUploads", express.static(path.join(__dirname, "villaUploads")));
 app.use("/homeUploads", express.static(path.join(__dirname, "uploads")));
-app.use(cors())
+app.use(cors({ origin: "*" })); // Allow all origins
 connectToDb()
 
 app.use("/api",landRoute)
