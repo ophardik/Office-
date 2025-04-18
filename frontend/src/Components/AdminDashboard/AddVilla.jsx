@@ -72,7 +72,7 @@ const AddVilla = () => {
     return (
         <>
             <form onSubmit={handleSubmit} className="container mt-4 p-4 border rounded">
-                <h2 className="text-center mb-4">Add Home</h2>
+                <h2 className="text-center mb-4">Add Villa</h2>
                 <input className="form-control mb-3" type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
                 <input className="form-control mb-3" type="number" placeholder="Square Yards" value={squareYards} onChange={(e) => setSquareYards(e.target.value)} />
                 <input className="form-control mb-3" type="text" placeholder="Direction" value={direction} onChange={(e) => setDirection(e.target.value)} />

@@ -17,7 +17,7 @@ const AllVillas = () => {
   
     const allProperty = async () => {
       try {
-        const response = await axios.get('/api6/allVilla');
+        const response = await axios.get('api6/allVilla');
         console.log("Fetched Properties:", response.data);
         setProperty(response.data);
       } catch (error) {

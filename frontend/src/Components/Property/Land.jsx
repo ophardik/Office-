@@ -33,7 +33,7 @@ const Land = () => {
             const fetchProperty = async () => {
               try {
                 setLoading(true);
-                const apiUrl = category === "land" ? `${BASE_URL}/api/allLand` : "/api/default";
+                const apiUrl= '/api/allLand'
                 const response = await fetch(apiUrl);
                 const result = await response.json();
                 console.log(result);

@@ -15,8 +15,8 @@ const villaDir=path.join(__dirname,"villaUploads")
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
-app.use("/villaUploads", express.static(path.join(__dirname, "villaUploads")));
-app.use("/homeUploads", express.static(path.join(__dirname, "uploads")));
+app.use("/uploads", express.static(path.join(__dirname, "uploads"))); // for home images
+
 app.use(cors({ origin: "*" })); // Allow all origins
 connectToDb()
 

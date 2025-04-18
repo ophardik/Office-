@@ -35,7 +35,7 @@ const Villa = () => {
             const fetchProperty = async () => {
               try {
                 setLoading(true);
-                var apiUrl = `${BASE_URL}/api6/allVilla`; // Adjust based on your category
+                var apiUrl = `/api6/allVilla`; // Adjust based on your category
                 const response = await fetch(apiUrl);
                 const data = await response.json();
                 console.log(data);

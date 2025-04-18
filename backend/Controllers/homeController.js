@@ -1,4 +1,5 @@
 const homeModel=require("../Models/homeModel")
+const path = require("path");
 const addHome = async (req, res) => {
     try {
         const {
@@ -73,8 +74,9 @@ const allHouse=async(req,res)=>{
         direction:house.direction,
         location:house.location,
         price:house.price,
-        image:house.image,
-        images:house.images,
+        image: `${req.protocol}://${req.get("host")}/uploads/${path.basename(house.image)}`,
+images: house.images.map(img => `${req.protocol}://${req.get("host")}/uploads/${path.basename(img)}`),
+
         description:house.description,
         type:house.type,
         bhk:house.bhk,
@@ -96,7 +98,7 @@ const allHouse=async(req,res)=>{
 const deleteHome=async(req,res)=>{
     try {
         const {id}=req.params;
-        const deletedHome=await homeModel.findByIdAndDelete(id);
+        const deletedHome   =await homeModel.findByIdAndDelete(id);
         if(!deletedHome){
             return res.status(404).json({
                 message:"Home not found",
